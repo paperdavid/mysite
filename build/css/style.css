@@ -253,6 +253,7 @@ body
 .navbar__item ul
 {
     margin: 0;
+    padding: 0;
 }
 .bg
 {
@@ -261,16 +262,19 @@ body
     top: 0;
     left: 0;
 
-    width: 50%;
+    width: 44%;
     height: 100%;
 
     background-image: url(../../img/images/bg.jpg);
     background-position: 50%;
     background-size: cover;
 }
-article,
-footer,
-footer a
+article
+{
+    color: #000;
+}
+.white,
+.white a
 {
     color: #fff;
 }

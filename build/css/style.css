@@ -1,0 +1,698 @@
+/**************************************/
+/* Styles (LESS/CSS) files supervisor */
+/**************************************/
+/* Third party */
+/* Custom */
+body
+{
+    font-family: Futura PT;
+
+    width: 85%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+
+    counter-reset: sidenote-counter;
+
+    color: #111;
+    background-color: #fffff8;
+}
+/*
+ * Gridism
+ * A simple, responsive, and handy CSS grid by @cobyism
+ * https://github.com/cobyism/gridism
+ */
+/* Preserve some sanity */
+.grid,
+.unit
+{
+    box-sizing: border-box;
+}
+/* Set up some rules to govern the grid */
+.grid
+{
+    display: block;
+    clear: both;
+}
+.grid .unit
+{
+    float: left;
+
+    width: 100%;
+    padding: 10px;
+}
+/* This ensures the outer gutters are equal to the (doubled) inner gutters. */
+.grid .unit:first-child
+{
+    padding-left: 0;
+}
+.grid .unit:last-child
+{
+    padding-right: 0;
+}
+/* Nested grids already have padding though, so let’s nuke it */
+.unit .unit:first-child
+{
+    padding-left: 0;
+}
+.unit .unit:last-child
+{
+    padding-right: 0;
+}
+.unit .grid:first-child > .unit
+{
+    padding-top: 0;
+}
+.unit .grid:last-child > .unit
+{
+    padding-bottom: 0;
+}
+/* Let people nuke the gutters/padding completely in a couple of ways */
+.no-gutters .unit,
+.unit.no-gutters
+{
+    padding: 0 !important;
+}
+/* Wrapping at a maximum width is optional */
+.wrap .grid,
+.grid.wrap
+{
+    max-width: 978px;
+    margin: 0 auto;
+}
+/* Width classes also have shorthand versions numbered as fractions
+ * For example: for a grid unit 1/3 (one third) of the parent width,
+ * simply apply class="w-1-3" to the element. */
+.grid .whole,
+.grid .w-1-1
+{
+    width: 100%;
+}
+.grid .half,
+.grid .w-1-2
+{
+    width: 50%;
+}
+.grid .one-third,
+.grid .w-1-3
+{
+    width: 33.3332%;
+}
+.grid .two-thirds,
+.grid .w-2-3
+{
+    width: 66.6665%;
+}
+.grid .one-quarter,
+.grid .one-fourth,
+.grid .w-1-4
+{
+    width: 25%;
+}
+.grid .three-quarters,
+.grid .three-fourths,
+.grid .w-3-4
+{
+    width: 75%;
+}
+.grid .one-fifth,
+.grid .w-1-5
+{
+    width: 20%;
+}
+.grid .two-fifths,
+.grid .w-2-5
+{
+    width: 40%;
+}
+.grid .three-fifths,
+.grid .w-3-5
+{
+    width: 60%;
+}
+.grid .four-fifths,
+.grid .w-4-5
+{
+    width: 80%;
+}
+.grid .golden-small,
+.grid .w-g-s
+{
+    width: 38.2716%;
+}
+/* Golden section: smaller piece */
+.grid .golden-large,
+.grid .w-g-l
+{
+    width: 61.7283%;
+}
+/* Golden section: larger piece */
+/* Clearfix after every .grid */
+.grid
+{
+    *zoom: 1;
+}
+.grid:before,
+.grid:after
+{
+    line-height: 0;
+
+    display: table;
+
+    content: '';
+}
+.grid:after
+{
+    clear: both;
+}
+/* Utility classes */
+.align-center
+{
+    text-align: center;
+}
+.align-left
+{
+    text-align: left;
+}
+.align-right
+{
+    text-align: right;
+}
+.pull-left
+{
+    float: left;
+}
+.pull-right
+{
+    float: right;
+}
+/* A property for a better rendering of images in units: in
+   this way bigger pictures are just resized if the unit
+   becomes smaller */
+.unit img
+{
+    max-width: 100%;
+}
+/* Hide elements using this class by default */
+.only-on-mobiles
+{
+    display: none !important;
+}
+/* Responsive Stuff */
+@media screen and (max-width: 568px)
+{
+    /* Stack anything that isn’t full-width on smaller screens 
+     and doesn't provide the no-stacking-on-mobiles class */
+    .grid:not(.no-stacking-on-mobiles) > .unit
+    {
+        width: 100% !important;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .unit .grid .unit
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Sometimes, you just want to be different on small screens */
+    .center-on-mobiles
+    {
+        text-align: center !important;
+    }
+    .hide-on-mobiles
+    {
+        display: none !important;
+    }
+    .only-on-mobiles
+    {
+        display: block !important;
+    }
+}
+/* Expand the wrap a bit further on larger screens */
+@media screen and (min-width: 1180px)
+{
+    .wider .grid,
+    .grid.wider
+    {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}
+.navbar__logo a
+{
+    border: none;
+}
+.navbar__logo a:hover
+{
+    border: none;
+}
+.navbar svg
+{
+    margin: 9px 0;
+}
+.navbar__item ul
+{
+    margin: 0;
+}
+.bg
+{
+    position: fixed;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-image: url(../../img/images/bg.jpg);
+    background-position: 50%;
+    background-size: cover;
+}
+article,
+footer,
+footer a
+{
+    color: #fff;
+}
+.st0
+{
+    cursor: pointer;
+    -webkit-transition: 500ms cubic-bezier(0, 0, .2, 1);
+            transition: 500ms cubic-bezier(0, 0, .2, 1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+
+    fill: #fff;
+}
+.st0:hover
+{
+    -webkit-transition: 500ms cubic-bezier(0, 0, .2, 1);
+            transition: 500ms cubic-bezier(0, 0, .2, 1);
+    -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+            transform: scale(.9);
+
+    stroke: transparent;
+}
+.st0:active
+{
+    -webkit-transition: 200ms cubic-bezier(0, 0, .2, 1);
+            transition: 200ms cubic-bezier(0, 0, .2, 1);
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+
+    stroke: transparent;
+}
+.first:active
+{
+    fill: #ffeb3b;
+}
+.second:active
+{
+    fill: #f44336;
+}
+@font-face
+{
+    font-family: Futura PT;
+}
+html
+{
+    font-size: 13px;
+}
+h1
+{
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1;
+
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+}
+h2
+{
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+
+    margin-top: 2.1rem;
+    margin-bottom: 0;
+}
+h3
+{
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+p.subtitle
+{
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1;
+
+    display: block;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+table
+{
+    font-size: 1.2rem;
+    line-height: 1.4;
+
+    width: 98%;
+    margin: 1.4rem 1%;
+
+    border-spacing: 0 5px;
+    border-collapse: separate;
+
+    text-align: right;
+
+    -webkit-font-feature-settings: 'tnum';
+    /* This is technically redundant */
+       -moz-font-feature-settings: 'tnum';
+        -ms-font-feature-settings: 'tnum';
+}
+thead th
+{
+    font-weight: 400;
+
+    border-spacing: 5px 5px;
+    border-collapse: separate;
+
+    border-bottom: 1px solid #aaa;
+}
+td.text
+{
+    text-align: left;
+}
+span.table-label
+{
+    padding-top: 8px;
+}
+/* to maintain height relative to table header row */
+table.booktabs
+{
+    width: auto;
+    margin: 0 auto;
+
+    border-spacing: 0;
+
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+.booktabs th
+{
+    font-weight: normal;
+
+    padding: .65ex .5em .4ex .5em;
+
+    text-align: center;
+
+    border-bottom: 1px solid #333;
+}
+.booktabs th.cmid
+{
+    border-bottom: 1px solid #666;
+}
+.booktabs th.nocmid
+{
+    border-bottom: none;
+}
+.booktabs tbody tr:first-child td
+{
+    padding-top: .65ex;
+}
+/* add space between thead row and tbody */
+.booktabs td
+{
+    padding-right: .5em;
+    padding-left: .5em;
+
+    text-align: left;
+}
+.booktabs caption
+{
+    font-size: 90%;
+
+    width: auto;
+    margin-top: 1ex;
+    margin-right: auto;
+    margin-left: auto;
+
+    caption-side: top;
+
+    text-align: left;
+}
+.booktabs tbody tr td.l
+{
+    text-align: left !important;
+}
+.booktabs tbody tr td.c
+{
+    text-align: center !important;
+}
+.booktabs tbody tr td.r
+{
+    text-align: right !important;
+}
+article
+{
+    position: relative;
+
+    padding: 5rem 0rem;
+}
+section
+{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+p,
+ol,
+ul
+{
+    font-size: 1.4rem;
+}
+p
+{
+    line-height: 2rem;
+
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+
+    vertical-align: baseline;
+}
+blockquote p
+{
+    font-size: 1.1rem;
+
+    width: 50%;
+}
+blockquote footer
+{
+    width: 50%;
+
+    text-align: right;
+}
+ul
+{
+    list-style-type: none;
+}
+li
+{
+    padding: .5rem 0;
+}
+figure
+{
+    max-width: 55%;
+    margin-bottom: 3em;
+
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+figcaption
+{
+    font-size: 1.0rem;
+    line-height: 1.6;
+
+    position: relative;
+
+    float: right;
+    clear: right;
+
+    margin-top: 0;
+    margin-right: -48%;
+    margin-bottom: 0;
+
+    vertical-align: baseline;
+}
+figure.fullwidth figcaption
+{
+    margin-right: 24%;
+}
+a
+{
+    padding-bottom: 1px;
+
+    text-decoration: none;
+
+    color: #111;
+    border-bottom: 1px solid #777;
+}
+a:hover
+{
+    color: #00f;
+    border-bottom: 1px solid #00f;
+}
+img
+{
+    max-width: 100%;
+}
+::-moz-selection
+{
+    color: #fff;
+    background: #00f;
+}
+::selection
+{
+    color: #fff;
+    background: #00f;
+}
+/***************************************************/
+/* Set custom or change third-party Less variables */
+/***************************************************/
+/* Third party */
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+/*
+The `retina-sprite` class sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+@icon-home-group: 'icon-home' @icon-home @icon-home-2x;
+
+.icon-home {
+  .retina-sprite(@icon-home-group);
+}
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+/*
+The `.retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in LESS
+
+.retina-sprites(@retina-groups);
+*/
+.svg-sprite--html5
+{
+    width: 47px;
+    height: 47px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 47px 47px;
+}
+.no-svg .svg-sprite--html5
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.png-sprite:before
+{
+    display: inline-block;
+
+    content: '';
+}
+.png-sprite--html5:before
+{
+    width: 32px;
+    height: 32px;
+
+    background-image: url(../img/sprites/png/png-sprite.png);
+    background-position: 0 0;
+}
+.png-sprite--html5-retina:before
+{
+    width: 32px;
+    height: 32px;
+
+    background-image: url(../img/sprites/png/png-sprite.png);
+    background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+{
+    .png-sprite--html5-retina:before
+    {
+        background-image: url(../img/sprites/png/png-sprite-2x.png);
+        background-size: 32px 32px;
+    }
+}
+.svg-sprite:before
+{
+    display: inline-block;
+
+    width: 32px!important;
+    height: 32px!important;
+
+    content: '';
+
+    background-size: contain!important;
+}
+.svg-sprite--html5-icon:before
+{
+    width: 47px;
+    height: 47px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 47px 47px;
+}
+.no-svg .svg-sprite--html5-icon:before
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}

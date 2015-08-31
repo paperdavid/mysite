@@ -9,7 +9,9 @@ body
 
     width: 85%;
     max-width: 1400px;
+    margin-top: 0;
     margin-right: auto;
+    margin-bottom: 0;
     margin-left: auto;
 
     counter-reset: sidenote-counter;
@@ -248,9 +250,9 @@ body
 }
 .navbar svg
 {
-    margin: 9px 0;
+    margin: .5rem 0;
 }
-.navbar__item ul
+.navbar__menu__item ul
 {
     margin: 0;
     padding: 0;
@@ -262,12 +264,10 @@ body
     top: 0;
     left: 0;
 
-    width: 44%;
+    width: 33%;
     height: 100%;
 
-    background-image: url(../../img/images/bg.jpg);
-    background-position: 50%;
-    background-size: cover;
+    background-color: #b2d0e7;
 }
 article
 {
@@ -314,11 +314,11 @@ article
 }
 .first:active
 {
-    fill: #ffeb3b;
+    fill: #ffec54;
 }
 .second:active
 {
-    fill: #f44336;
+    fill: #00f;
 }
 @font-face
 {
@@ -326,7 +326,7 @@ article
 }
 html
 {
-    font-size: 13px;
+    font-size: 14px;
 }
 h1
 {
@@ -551,7 +551,7 @@ a
     text-decoration: none;
 
     color: #111;
-    border-bottom: 1px solid #777;
+    border-bottom: 1px dotted #111;
 }
 a:hover
 {

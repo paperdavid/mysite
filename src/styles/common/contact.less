@@ -1,4 +1,4 @@
-.contact__item {
+.contact__item, {
   margin: 3em 0;
 
   & a {
@@ -17,11 +17,22 @@
   }
 }
 
+.btn {
+  color: @accent;
+  padding: 1rem 2rem;
+  border: 1px solid @accent;
+  cursor: pointer;
+
+    &:hover {
+    color: #fff;
+    background-color: @accent;
+  }
+}
 
 input {
   display: block;
   font-size: 1em;
-  color: #fff;
+  color: @accent;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid @accent;
@@ -35,14 +46,14 @@ input {
   outline:none;
 
   &::-webkit-input-placeholder {
-    color: #fff;
+    color: @accent;
   }
 }
 
 textarea {
   display: block;
   font-size: 1em;
-  color: #fff;
+  color: @accent;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid @accent;
@@ -56,7 +67,7 @@ textarea {
   outline:none;
 
   &::-webkit-input-placeholder {
-    color: #fff;
+    color: @accent;
   }
 }
 

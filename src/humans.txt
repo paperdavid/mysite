@@ -1,14 +1,16 @@
 /* TEAM */
-	Developer: Igor Timohin
-	Site: igor-timohin.ru
-	Contact: timohin.i [at] gmail.com
-	Twitter: @Igor_Timokhin
+	Developer: David Mekerihvili
+	Site: paperdavid.ru
+	Contact: paperdavid [at] gmail.com
+	Twitter: @pubtheoffice
 	From: Saint-Petersburg, Russia
 	Location: Saint-Petersburg, Russia
 
 /* THANKS */
 
-    School: http://epixx.ru
+  School: http://epixx.ru
+  Developer: Igor Timohin
+  Photo: Evgeniy Klimenkov
 
 /* SITE */
 	Language: Russian
@@ -16,4 +18,4 @@
 	Standards: HTML5, CSS3
 	Components: Modernizr, jQuery, Bootstrap, Bootstrap Material Design, etc.
 	IDE: PhpShtorm, Gulp, Git, GitHub Pages
-    Software: Software used for the development
+  Software: Software used for the development

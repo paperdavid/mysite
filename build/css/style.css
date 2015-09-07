@@ -5,11 +5,9 @@
 /* Custom */
 body
 {
-    font-family: Futura PT;
+    font-family: Futura PT, Verdana, sans-serif;
 
-    max-width: 1400px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 
     counter-reset: sidenote-counter;
 
@@ -35,6 +33,14 @@ body
 .bg--purple
 {
     background-color: #715bb7;
+}
+.inner
+{
+    padding: 3rem 0;
+}
+.inner--top
+{
+    padding: 5rem 0 1rem 0;
 }
 [role='button']
 {
@@ -65,18 +71,15 @@ body
 {
     .container
     {
-        width: 1260px;
+        width: 1300px;
     }
 }
 .container-fluid
 {
     margin-right: auto;
     margin-left: auto;
-}
-.row
-{
-    margin-right: -15px;
-    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .col-xs-1,
 .col-sm-1,
@@ -1080,19 +1083,23 @@ body
 {
     position: fixed;
 }
-.navbar__logo a
+.nav
+{
+    padding: 3rem 0;
+}
+.nav__logo a
 {
     border: none;
 }
-.navbar__logo a:hover
+.nav__logo a:hover
 {
     border: none;
 }
-.navbar svg
+.nav svg
 {
     margin: .5rem 0;
 }
-.navbar__menu__item ul
+.nav__menu__item ul
 {
     margin: 0;
     padding: 0;
@@ -1109,6 +1116,12 @@ article
 .bg
 {
     background-color: #fff;
+}
+.image__overlay
+{
+    overflow: hidden;
+
+    height: 70%;
 }
 .contact__item
 {
@@ -1133,6 +1146,7 @@ article
 }
 .btn
 {
+    width: 20%;
     padding: 1rem 2rem;
 
     cursor: pointer;
@@ -1159,7 +1173,7 @@ input
     margin-top: 1em;
     padding: .5em 0;
 
-    color: #00f;
+    color: #000;
     border: none;
     border-bottom: 1px solid #00f;
     border-radius: 0;
@@ -1168,7 +1182,7 @@ input
 }
 input::-webkit-input-placeholder
 {
-    color: #00f;
+    color: #000;
 }
 textarea
 {
@@ -1184,7 +1198,7 @@ textarea
     margin-top: 1em;
     padding: .5em 0;
 
-    color: #00f;
+    color: #000;
     border: none;
     border-bottom: 1px solid #00f;
     border-radius: 0;
@@ -1193,7 +1207,7 @@ textarea
 }
 textarea::-webkit-input-placeholder
 {
-    color: #00f;
+    color: #000;
 }
 .st0
 {
@@ -1390,7 +1404,7 @@ article
 {
     position: relative;
 
-    padding: 5rem 0rem 1rem 0;
+    padding: 1rem 0rem;
 }
 section
 {
@@ -1488,6 +1502,10 @@ img
 {
     color: #fff;
     background: #00f;
+}
+strong
+{
+    font-weight: normal;
 }
 strong .white
 {

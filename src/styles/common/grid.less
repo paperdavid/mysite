@@ -4,6 +4,20 @@ body {
   color: #111;
   counter-reset: sidenote-counter;
   margin: 0;
+
+
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .bg--red {background-color: @bg-red;}
@@ -11,12 +25,13 @@ body {
 .bg--yellow {background-color: @bg-yellow;}
 .bg--blue {background-color: @bg-blue;}
 .bg--purple {background-color: @bg-purple;}
+.bg--pastelle {background-color: @bg-pastelle;}
 
 .inner {
   padding: 3rem 0;
 
   &--lg {
-    padding: 6rem 0;
+    padding: 8rem 0;
   }
 
   &--sm {
@@ -75,7 +90,7 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: bold;
+  font-weight: normal;
 }
 dfn {
   font-style: italic;
@@ -306,7 +321,7 @@ hr {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1300px;
+    width: 1400px;
   }
 }
 .container-fluid {

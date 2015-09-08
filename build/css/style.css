@@ -14,6 +14,15 @@ body
     color: #111;
     background-color: #fffff8;
 }
+*
+{
+    box-sizing: border-box;
+}
+:after,
+:before
+{
+    box-sizing: border-box;
+}
 .bg--red
 {
     background-color: #ff8d6c;
@@ -34,13 +43,17 @@ body
 {
     background-color: #715bb7;
 }
+.bg--pastelle
+{
+    background-color: #f8f3e6;
+}
 .inner
 {
     padding: 3rem 0;
 }
 .inner--lg
 {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 .inner--sm
 {
@@ -106,7 +119,7 @@ abbr[title]
 b,
 strong
 {
-    font-weight: bold;
+    font-weight: normal;
 }
 dfn
 {
@@ -394,7 +407,7 @@ hr
 {
     .container
     {
-        width: 1300px;
+        width: 1400px;
     }
 }
 .container-fluid
@@ -1472,7 +1485,6 @@ article
 }
 .btn
 {
-    width: 20%;
     padding: 1rem 2rem;
 
     cursor: pointer;

@@ -1582,7 +1582,7 @@ textarea::-webkit-input-placeholder
         -ms-transform-origin: center;
             transform-origin: center;
 
-    fill: #111;
+    fill: #00f;
 }
 .st0:hover
 {
@@ -1606,11 +1606,11 @@ textarea::-webkit-input-placeholder
 }
 .first:active
 {
-    fill: #fcd333;
+    fill: url(#YellowGradient);
 }
 .second:active
 {
-    fill: #ef4630;
+    fill: url(#RedGradient);
 }
 @font-face
 {

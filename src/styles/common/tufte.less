@@ -123,17 +123,33 @@ figcaption { float: right;
 
 figure.fullwidth figcaption { margin-right: 24%; }
 
-a { color: @text-color;
-    text-decoration: none;
+a { 
+
+  color: @black-80;
+  text-decoration: none;
+  padding-bottom: 1px; 
+
+  &.int {
+
     border-bottom: 1px dotted @text-color;
-    padding-bottom: 1px; 
 
     &:hover {
       color: @accent;
       border-bottom: 1px solid #00f;
     }
+  }
+
+  &.ext {
+    border-bottom: 1px solid @text-color;
+
+    &:hover {
+      color: @accent;
+      border-bottom: 1px solid #00f;
+    }
+  }
 
 }
+
 
 img { max-width: 100%; }
 
@@ -168,7 +184,9 @@ hr {
   border-top: 1px solid @text-color;
 }
 
-
+subtitle {
+  color: @black-60;
+}
 
 
 

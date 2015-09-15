@@ -1842,10 +1842,22 @@ a
 
     text-decoration: none;
 
-    color: #111;
+    color: #333;
+}
+a.int
+{
     border-bottom: 1px dotted #111;
 }
-a:hover
+a.int:hover
+{
+    color: #00f;
+    border-bottom: 1px solid #00f;
+}
+a.ext
+{
+    border-bottom: 1px solid #111;
+}
+a.ext:hover
 {
     color: #00f;
     border-bottom: 1px solid #00f;
@@ -1882,6 +1894,10 @@ hr
 {
     border: none;
     border-top: 1px solid #111;
+}
+subtitle
+{
+    color: #666;
 }
 /***************************************************/
 /* Set custom or change third-party Less variables */
@@ -2174,17 +2190,27 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     margin: 5px 7px;
     /*IE7 fix*/
 
-    opacity: .5;
+    opacity: 1;
     border-radius: 20px;
-    background: #00f;
+    background: #d7d2cd;
 
     filter: alpha(opacity=50);
 }
-.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page.active span
+{
+    /*IE7 fix*/
+    opacity: 1;
+    border: 1px solid #00f;
+    background: #fff8;
+
+    filter: alpha(opacity=100);
+}
 .owl-theme .owl-controls.clickable .owl-page:hover span
 {
     /*IE7 fix*/
     opacity: 1;
+    border: 1px solid #00f;
+    background: #00f;
 
     filter: alpha(opacity=100);
 }

@@ -43,11 +43,11 @@ var projectPath = {
         css: 'build/css/',
         img: 'build/img/images/',
         svg: 'build/img/svg/',
-        pngSprite: 'build/img/sprites/png/',
-        pngSpriteCSS: 'src/styles/common/',
-        svgSprite: 'build/img/sprites/svg/svg-sprite.svg',
-        svgSpriteNoSvg: 'build/img/sprites/svg/svg-sprite.png',
-        svgSpriteCSS: 'src/styles/common/_svg-sprite.less',
+        // pngSprite: 'build/img/sprites/png/',
+        // pngSpriteCSS: 'src/styles/common/',
+        // svgSprite: 'build/img/sprites/svg/svg-sprite.svg',
+        // svgSpriteNoSvg: 'build/img/sprites/svg/svg-sprite.png',
+        // svgSpriteCSS: 'src/styles/common/_svg-sprite.less',
         fonts: 'build/css/fonts/'
     },
     src: { // Set source paths
@@ -57,10 +57,10 @@ var projectPath = {
         style: 'src/styles/style.less',
         img: 'src/img/images/**/*.*',
         svg: 'src/img/svg/**/*.svg',
-        pngSprite: 'src/img/sprites/png/**/*.png',
-        pngRetinaSprite: 'src/img/sprites/png/**/*-2x.png',
-        svgSprite: 'src/img/sprites/svg/**/*.svg',
-        svgSpriteTpl: 'src/styles/common/_svg-sprite-less.tpl',
+        // pngSprite: 'src/img/sprites/png/**/*.png',
+        // pngRetinaSprite: 'src/img/sprites/png/**/*-2x.png',
+        // svgSprite: 'src/img/sprites/svg/**/*.svg',
+        // svgSpriteTpl: 'src/styles/common/_svg-sprite-less.tpl',
         fonts: 'src/styles/fonts/**/*.*'
     },
     watch: { // Set watch paths
@@ -69,8 +69,8 @@ var projectPath = {
         style: 'src/styles/**/*.less',
         img: 'src/img/images/**/*.*',
         svg: 'src/img/svg/**/*.svg',
-        pngSprite: 'src/img/sprites/png/**/*.png',
-        svgSprite: 'src/img/sprites/svg/**/*.svg',
+        // pngSprite: 'src/img/sprites/png/**/*.png',
+        // svgSprite: 'src/img/sprites/svg/**/*.svg',
         fonts: 'src/styles/fonts/**/*.*'
     },
     clean: ['build/**/*', '!build/.gitignore', '!build/humans.txt'], // Set paths and exludes for cleaning build dir
@@ -179,50 +179,50 @@ gulp.task('svg', function () {
 });
 
 /* PNG Sprite */
-gulp.task('png-sprite', function () {
-    // Generate spritesheet
-    var spriteData = gulp.src(projectPath.src.pngSprite).pipe(spritesmith({
-        imgName: 'png-sprite.png',
-        imgPath: '../img/sprites/png/png-sprite.png',
-        retinaSrcFilter: projectPath.src.pngRetinaSprite,
-        retinaImgName: 'png-sprite-2x.png',
-        retinaImgPath: '../img/sprites/png/png-sprite-2x.png',
-        padding: 0,
-        cssName: '_png-sprite.less',
-        cssVarMap: function (sprite) {
-            sprite.name = 'sprite__' + sprite.name;
-        }
-    }));
+// gulp.task('png-sprite', function () {
+//     // Generate spritesheet
+//     var spriteData = gulp.src(projectPath.src.pngSprite).pipe(spritesmith({
+//         imgName: 'png-sprite.png',
+//         imgPath: '../img/sprites/png/png-sprite.png',
+//         retinaSrcFilter: projectPath.src.pngRetinaSprite,
+//         retinaImgName: 'png-sprite-2x.png',
+//         retinaImgPath: '../img/sprites/png/png-sprite-2x.png',
+//         padding: 0,
+//         cssName: '_png-sprite.less',
+//         cssVarMap: function (sprite) {
+//             sprite.name = 'sprite__' + sprite.name;
+//         }
+//     }));
 
-    // Pipe image stream through image optimizer and onto disk
-    spriteData.img
-        .pipe(imagemin())
-        .pipe(gulp.dest(projectPath.build.pngSprite));
+//     // Pipe image stream through image optimizer and onto disk
+//     spriteData.img
+//         .pipe(imagemin())
+//         .pipe(gulp.dest(projectPath.build.pngSprite));
 
-    // Pipe CSS stream onto disk
-    spriteData.css
-        .pipe(gulp.dest(projectPath.build.pngSpriteCSS))
-        .pipe(reload({stream:true}));
-});
+//     // Pipe CSS stream onto disk
+//     spriteData.css
+//         .pipe(gulp.dest(projectPath.build.pngSpriteCSS))
+//         .pipe(reload({stream:true}));
+// });
 
 /* SVG sprite */
-gulp.task('svg-sprite', function () {
-    gulp.src(projectPath.src.svgSprite)
-        .pipe(svgspritesheet({
-            cssPathNoSvg: '../img/sprites/svg/svg-sprite.png',
-            cssPathSvg: '../img/sprites/svg/svg-sprite.svg',
-            padding: 0,
-            pixelBase: 16,
-            positioning: 'packed',
-            templateSrc: projectPath.src.svgSpriteTpl,
-            templateDest: projectPath.build.svgSpriteCSS,
-            units: 'px'
-        }))
-        .pipe(svgmin())
-        .pipe(gulp.dest(projectPath.build.svgSprite))
-        .pipe(svg2png())
-        .pipe(gulp.dest(projectPath.build.svgSpriteNoSvg));
-});
+// gulp.task('svg-sprite', function () {
+//     gulp.src(projectPath.src.svgSprite)
+//         .pipe(svgspritesheet({
+//             cssPathNoSvg: '../img/sprites/svg/svg-sprite.png',
+//             cssPathSvg: '../img/sprites/svg/svg-sprite.svg',
+//             padding: 0,
+//             pixelBase: 16,
+//             positioning: 'packed',
+//             templateSrc: projectPath.src.svgSpriteTpl,
+//             templateDest: projectPath.build.svgSpriteCSS,
+//             units: 'px'
+//         }))
+//         .pipe(svgmin())
+//         .pipe(gulp.dest(projectPath.build.svgSprite))
+//         .pipe(svg2png())
+//         .pipe(gulp.dest(projectPath.build.svgSpriteNoSvg));
+// });
 
 /* Fonts */
 gulp.task('fonts', function() {
@@ -247,8 +247,8 @@ gulp.task('build', function(callback) {
         'js',
         'less',
         'images',
-        'png-sprite',
-        'svg-sprite',
+        // 'png-sprite',
+        // 'svg-sprite',
         'svg',
         'fonts',
         callback)
@@ -272,12 +272,12 @@ gulp.task('watch',['webserver'], function(){
     watch([projectPath.watch.svg], function(event, cb) {
         gulp.start('svg');
     });
-    watch([projectPath.watch.pngSprite], function(event, cb) {
-        gulp.start('png-sprite');
-    });
-    watch([projectPath.watch.svgSprite], function(event, cb) {
-        gulp.start('svg-sprite');
-    });
+    // watch([projectPath.watch.pngSprite], function(event, cb) {
+    //     gulp.start('png-sprite');
+    // });
+    // watch([projectPath.watch.svgSprite], function(event, cb) {
+    //     gulp.start('svg-sprite');
+    // });
     watch([projectPath.watch.fonts], function(event, cb) {
         gulp.start('fonts');
     });

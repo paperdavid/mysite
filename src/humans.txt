@@ -8,14 +8,14 @@
 
 /* THANKS */
 
-  School: http://epixx.ru
-  Developer: Igor Timohin
-  Photo: Evgeniy Klimenkov
+	School: http://epixx.ru
+	Developer: Igor Timohin
+	Photo: Evgeniy Klimenkov
 
 /* SITE */
 	Language: Russian
 	Doctype:HTML5
 	Standards: HTML5, CSS3
-	Components: Modernizr, jQuery, Bootstrap, Bootstrap Material Design, etc.
+	Components: Modernizr, jQuery, Bootstrap, etc.
 	IDE: PhpShtorm, Gulp, Git, GitHub Pages
-  Software: Software used for the development
+	Software: Software used for the development

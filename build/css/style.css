@@ -1,7 +1,6 @@
 /**************************************/
 /* Styles (LESS/CSS) files supervisor */
 /**************************************/
-/* Third party */
 /* Custom */
 body
 {
@@ -430,15 +429,15 @@ hr
 {
     .container
     {
-        width: 1400px;
+        width: 1170px;
     }
 }
 .container-fluid
 {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3rem;
+    padding-left: 3rem;
 }
 .row
 {
@@ -1449,6 +1448,18 @@ hr
 {
     position: fixed;
 }
+.text--center
+{
+    text-align: center;
+}
+.text--left
+{
+    text-align: left;
+}
+.text--right
+{
+    text-align: right;
+}
 .nav__logo a
 {
     border: none;
@@ -1604,9 +1615,17 @@ textarea::-webkit-input-placeholder
 
     stroke: transparent;
 }
+.first
+{
+    fill: #00f;
+}
 .first:active
 {
     fill: url(#YellowGradient);
+}
+.second
+{
+    fill: #00f;
 }
 .second:active
 {

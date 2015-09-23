@@ -11591,7 +11591,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 $(document).ready(function() {
 
 $('.owl-carousel').owlCarousel({
-    autoPlay: 5000,
+    autoPlay: 10000,
     margin:30,
     loop:true,
     items:2

@@ -2,9 +2,37 @@
 /* Styles (LESS/CSS) files supervisor */
 /**************************************/
 /* Custom */
+/* first for IE 4–8 */
+@font-face
+{
+    font-family: ProbaProRegular;
+
+    src: url('fonts/ProbaPro-RegularWeb.eot');
+}
+/* then for WOFF-capable browsers */
+@font-face
+{
+    font-family: ProbaProRegular;
+
+    src: url('fonts/ProbaPro-RegularWeb.woff') format('woff');
+}
+/* first for IE 4–8 */
+@font-face
+{
+    font-family: ProbaProItalic;
+
+    src: url('fonts/ProbaPro-ItalicWeb.eot');
+}
+/* then for WOFF-capable browsers */
+@font-face
+{
+    font-family: ProbaProItalic;
+
+    src: url('fonts/ProbaPro-ItalicWeb.woff') format('woff');
+}
 body
 {
-    font-family: Futura PT, Verdana, sans-serif;
+    font-family: ProbaProRegular, sans-serif;
 
     margin: 0;
 
@@ -1665,10 +1693,6 @@ textarea::-webkit-input-placeholder
 {
     fill: url(#RedGradient);
 }
-@font-face
-{
-    font-family: Futura PT;
-}
 html
 {
     font-size: 12px;
@@ -1694,9 +1718,9 @@ h2
 }
 h3
 {
+    font-family: ProbaProItalic;
     font-size: 1.7rem;
     font-weight: 400;
-    font-style: italic;
     line-height: 1;
 
     margin-top: 2rem;
@@ -1908,6 +1932,7 @@ a.int:hover
 }
 a.ext
 {
+    color: #111;
     border-bottom: 1px solid #111;
 }
 a.ext:hover

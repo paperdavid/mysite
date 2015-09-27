@@ -1,5 +1,29 @@
+/* first for IE 4–8 */
+@font-face {
+  font-family: ProbaProRegular;
+  src: url("fonts/ProbaPro-RegularWeb.eot");
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+  font-family: ProbaProRegular;
+  src: url("fonts/ProbaPro-RegularWeb.woff") format("woff");
+}
+
+/* first for IE 4–8 */
+@font-face {
+  font-family: ProbaProItalic;
+  src: url("fonts/ProbaPro-ItalicWeb.eot");
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+  font-family: ProbaProItalic;
+  src: url("fonts/ProbaPro-ItalicWeb.woff") format("woff");
+}
+
 body { 
-  font-family: Futura PT,Verdana, sans-serif;
+  font-family: ProbaProRegular, sans-serif;
   background-color: #fffff8;
   color: #111;
   counter-reset: sidenote-counter;

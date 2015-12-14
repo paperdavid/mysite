@@ -88,11 +88,11 @@ body
 }
 .inner--top
 {
-    padding: 8rem 0 0 0;
+    padding-top: 8rem;
 }
 .inner--bottom
 {
-    padding: 0 0 8rem 0;
+    padding-bottom: 8rem;
 }
 @media (max-width: 768px)
 {
@@ -1492,6 +1492,13 @@ hr
 {
     text-align: right;
 }
+@media (max-width: 780px)
+{
+    .nav__menu
+    {
+        padding: 1rem 0 1rem 3rem;
+    }
+}
 .nav__logo a
 {
     border: none;
@@ -1695,7 +1702,7 @@ textarea::-webkit-input-placeholder
 }
 html
 {
-    font-size: 12px;
+    font-size: 11px;
 }
 h1
 {
@@ -1928,7 +1935,7 @@ a.int
 a.int:hover
 {
     color: #00f;
-    border-bottom: 1px solid #00f;
+    border-color: #00f;
 }
 a.ext
 {

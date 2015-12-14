@@ -24,12 +24,10 @@
 
 body { 
   font-family: ProbaProRegular, sans-serif;
-  background-color: #fffff8;
+  background-color: @body-bg;
   color: #111;
   counter-reset: sidenote-counter;
   margin: 0;
-
-
 }
 
 * {
@@ -63,11 +61,11 @@ body {
   }
 
   &--top {
-    padding: 8rem 0 0 0;
+    padding-top: 8rem;
   }
 
   &--bottom {
-    padding: 0 0 8rem 0;
+    padding-bottom: 8rem;
   }
 }
 
@@ -363,11 +361,13 @@ hr {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -378,7 +378,6 @@ hr {
     width: 1170px;
   }
 }
-
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -1080,4 +1079,19 @@ hr {
 .text--center {text-align: center;}
 .text--left {text-align: left;}
 .text--right {text-align: right;}
+
+
+
+
+@media (max-width: 780px) {
+
+  .nav__menu {
+  padding: 1rem 0 1rem 3rem;
+  }
+}
+
+
+
+
+
 

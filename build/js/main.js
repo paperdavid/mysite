@@ -22,10 +22,12 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 $(document).ready(function() {
 
 $('.owl-carousel').owlCarousel({
-    autoPlay: 10000,
+    autoPlay:5000,
+    autoplayHoverPause:true,
     margin:30,
     loop:true,
-    items:2
+    items:2,
+    dotsEach:true
 })
 
 });

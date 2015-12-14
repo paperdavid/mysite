@@ -10,7 +10,6 @@
 
 	School: http://epixx.ru
 	Developer: Igor Timohin
-	Photo: Evgeniy Klimenkov
 
 /* SITE */
 	Language: Russian

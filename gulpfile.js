@@ -43,11 +43,6 @@ var projectPath = {
         css: 'build/css/',
         img: 'build/img/images/',
         svg: 'build/img/svg/',
-        // pngSprite: 'build/img/sprites/png/',
-        // pngSpriteCSS: 'src/styles/common/',
-        // svgSprite: 'build/img/sprites/svg/svg-sprite.svg',
-        // svgSpriteNoSvg: 'build/img/sprites/svg/svg-sprite.png',
-        // svgSpriteCSS: 'src/styles/common/_svg-sprite.less',
         fonts: 'build/css/fonts/'
     },
     src: { // Set source paths
@@ -57,10 +52,6 @@ var projectPath = {
         style: 'src/styles/style.less',
         img: 'src/img/images/**/*.*',
         svg: 'src/img/svg/**/*.svg',
-        // pngSprite: 'src/img/sprites/png/**/*.png',
-        // pngRetinaSprite: 'src/img/sprites/png/**/*-2x.png',
-        // svgSprite: 'src/img/sprites/svg/**/*.svg',
-        // svgSpriteTpl: 'src/styles/common/_svg-sprite-less.tpl',
         fonts: 'src/styles/fonts/**/*.*'
     },
     watch: { // Set watch paths
@@ -69,8 +60,6 @@ var projectPath = {
         style: 'src/styles/**/*.less',
         img: 'src/img/images/**/*.*',
         svg: 'src/img/svg/**/*.svg',
-        // pngSprite: 'src/img/sprites/png/**/*.png',
-        // svgSprite: 'src/img/sprites/svg/**/*.svg',
         fonts: 'src/styles/fonts/**/*.*'
     },
     clean: ['build/**/*', '!build/.gitignore', '!build/humans.txt'], // Set paths and exludes for cleaning build dir
@@ -81,7 +70,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+    tunnel: false,
     host: 'localhost',
     port: 9000,
     injectChanges: true,

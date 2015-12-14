@@ -8,5 +8,5 @@
 /* Third party */
 
 
-//= jquery-1.9.1.min.js
-//= owl.carousel.min.js
+//= common/jquery-1.9.1.min.js
+//= common/owl.carousel.min.js

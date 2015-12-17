@@ -1592,13 +1592,14 @@ article
 
     cursor: pointer;
 
-    color: #00f;
-    border: 1px solid #00f;
+    color: #666;
+    border: 1px solid #666;
 }
 .btn:hover
 {
     color: #fff;
-    background-color: #00f;
+    border: 1px solid #e43a15;
+    background-color: #e43a15;
 }
 input
 {
@@ -1616,7 +1617,7 @@ input
 
     color: #000;
     border: none;
-    border-bottom: 1px solid #00f;
+    border: 1px solid #666;
     border-radius: 0;
     outline: none;
     background-color: transparent;
@@ -1641,7 +1642,7 @@ textarea
 
     color: #000;
     border: none;
-    border-bottom: 1px solid #00f;
+    border: 1px solid #666;
     border-radius: 0;
     outline: none;
     background-color: transparent;
@@ -1702,7 +1703,7 @@ textarea::-webkit-input-placeholder
 }
 html
 {
-    font-size: 11px;
+    font-size: 13px;
 }
 h1
 {
@@ -1866,7 +1867,7 @@ p
 {
     line-height: 2rem;
 
-    margin-top: 1.4rem;
+    margin-top: 0;
     margin-bottom: 1.4rem;
     padding-right: 0;
 
@@ -1934,8 +1935,12 @@ a.int
 }
 a.int:hover
 {
-    color: #00f;
-    border-color: #00f;
+    color: #e43a15;
+    border-color: #e43a15;
+}
+a.int__active
+{
+    border: none;
 }
 a.ext
 {
@@ -1944,8 +1949,8 @@ a.ext
 }
 a.ext:hover
 {
-    color: #00f;
-    border-bottom: 1px solid #00f;
+    color: #e43a15;
+    border-bottom: 1px solid #e43a15;
 }
 img
 {
@@ -1966,16 +1971,6 @@ strong .white
 {
     color: #fff;
 }
-strong a
-{
-    color: #00f;
-    border: none;
-}
-strong a:hover
-{
-    color: #00f;
-    border: none;
-}
 hr
 {
     border: none;
@@ -1984,6 +1979,11 @@ hr
 subtitle
 {
     color: #666;
+}
+.p--big
+{
+    font-size: .8em;
+    line-height: 1.2em;
 }
 /***************************************************/
 /* Set custom or change third-party Less variables */

@@ -1,4 +1,4 @@
-html { font-size: 11px;}
+html { font-size: 13px;}
 
 h1 { font-weight: 400;
      margin-top: 0;
@@ -89,7 +89,7 @@ section { padding-top: 1rem;
 p, ol, ul { font-size: 1.4rem; }
 
 p { line-height: 2rem;
-    margin-top: 1.4rem;
+    margin-top: 0;
     margin-bottom: 1.4rem;
     padding-right: 0;
     vertical-align: baseline; }
@@ -132,8 +132,12 @@ a {
     border-bottom: 1px dotted @text-color;
 
     &:hover {
-      color: @accent;
-      border-color: @accent;
+      color: @link;
+      border-color: @link;
+    }
+
+    &__active {
+      border: none;
     }
   }
 
@@ -142,11 +146,10 @@ a {
     color: @text-color;
 
     &:hover {
-      color: @accent;
-      border-bottom: 1px solid #00f;
+      color: @link;
+      border-bottom: 1px solid @link;
     }
   }
-
 }
 
 
@@ -160,21 +163,9 @@ img { max-width: 100%; width: 100%;}
 
 strong {
 
-
   .white{
-    color: #fff;
+    color: @white;
   }
-
-  a {
-    color: @accent;
-    border: none;
-
-    &:hover {
-      border: none;
-      color: @accent;
-    }
-  }
-
 }
 
 
@@ -188,4 +179,9 @@ subtitle {
 }
 
 
-
+.p {
+  &--big {
+    font-size: .8em;
+    line-height: 1.2em;
+  }
+}

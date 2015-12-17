@@ -12,6 +12,6 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     items:2,
     dotsEach:true
-})
+});
 
 });

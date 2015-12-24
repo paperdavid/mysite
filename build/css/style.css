@@ -1499,6 +1499,17 @@ hr
         padding: 1rem 0 1rem 3rem;
     }
 }
+#page-preloader
+{
+    position: fixed;
+    z-index: 100500;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: #fffff8;
+}
 .nav__logo a
 {
     border: none;
@@ -1732,7 +1743,7 @@ h3
     line-height: 1;
 
     margin-top: 2rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 p.subtitle
 {
@@ -1985,9 +1996,6 @@ subtitle
     font-size: .8em;
     line-height: 1.2em;
 }
-/***************************************************/
-/* Set custom or change third-party Less variables */
-/***************************************************/
 /* Third party */
 .project__item a
 {

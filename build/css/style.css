@@ -1609,8 +1609,8 @@ article
 .btn:hover
 {
     color: #fff;
-    border: 1px solid #e43a15;
-    background-color: #e43a15;
+    border: 1px solid #b33;
+    background-color: #b33;
 }
 input
 {
@@ -1737,7 +1737,6 @@ h2
 }
 h3
 {
-    font-family: ProbaProItalic;
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 1;
@@ -1946,8 +1945,8 @@ a.int
 }
 a.int:hover
 {
-    color: #e43a15;
-    border-color: #e43a15;
+    color: #b33;
+    border-color: #b33;
 }
 a.int__active
 {
@@ -1960,8 +1959,8 @@ a.ext
 }
 a.ext:hover
 {
-    color: #e43a15;
-    border-bottom: 1px solid #e43a15;
+    color: #b33;
+    border-bottom: 1px solid #b33;
 }
 img
 {
